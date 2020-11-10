@@ -12,18 +12,8 @@ checker.use(
 );
 
 let checkInputAndLookUp = (name, surname, company, domains) => {
-  // final emails
-  let eMailsFinal = [];
-
   let wordsF = [];
   let wordsL = [];
-
-  // all words before dot
-
-  let wordsBeforeDot = [];
-
-  // functions
-  // for the first name
   let one = (name, nameLength, arr) => {
     for (let i = 0; i < nameLength; i++) {
       arr.push(name[i]);
@@ -49,14 +39,34 @@ let checkInputAndLookUp = (name, surname, company, domains) => {
     }
     return arr;
   };
-  one(name, name.length, wordsF);
-  two(surname, surname.length, wordsL);
+  let firstSection = one(name, name.length, wordsF);
+  let secondSection = two(surname, surname.length, wordsL);
+  // function to check the bist one from 2 arrays
+  const checkTheBigestOne = (first, second) => {
+    let Bigest = [];
+    if (first.length !== 0 && second.length !== 0) {
+      if (first.length > second.length) {
+        return (Bigest = first);
+      } else if (second.length > first.length) {
+        return (Bigest = second);
+      } else if (first.length === 0) {
+        return (Bigest = second);
+      } else if (second.length === 0) {
+        Bigest = first;
+      } else if ((first.length === second.length) === 0) {
+        return (Bigest = []);
+      }
+    }
+    return Bigest;
+  };
+  let value = checkTheBigestOne(firstSection, secondSection);
 
-  // right now we are looking for the length for the bigest arr
+  let finalArrBeforeDNSCheck = () => {
+    let arr;
+    return arr;
+  };
 
-  let mailAt = "@" + company;
-
-  return wordsF;
+  return value;
 };
 
 checker.post("/", (req, res, next) => {
