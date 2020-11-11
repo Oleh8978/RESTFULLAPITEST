@@ -1,10 +1,11 @@
 const bodyParser = require("body-parser");
+const http = require("http");
 
 const express = require("express");
 const appChecker = require("./apps/app");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 ///working with cors
 app.use((req, res, next) => {
@@ -28,7 +29,6 @@ app.use((req, res, next) => {
     creator: "Oleh Mykhailovskyi"
   });
 });
+const server = http.createServer(app);
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+server.listen(port, () => {});
