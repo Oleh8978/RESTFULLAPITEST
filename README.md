@@ -17,6 +17,16 @@ the api will return an output with type of error:
 deployed api version is https://peaceful-garden-62162.herokuapp.com/
 to make post request use https://peaceful-garden-62162.herokuapp.com/checker
 
+so it shouldbe post request like:
+
+post request to https://peaceful-garden-62162.herokuapp.com/checker
+
+parameters:
+
+name: Your name ( no spaces or special char.)
+surname: surname ( no spaces or special char.)
+company: company ( no spaces or special char.)
+
 
 ################################################################################################
 the source of code with the fixed bags and api is https://github.com/Oleh8978/restapitestapi2
