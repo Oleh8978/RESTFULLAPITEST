@@ -12,4 +12,10 @@ In case if you are missing some required words:
 name, surname, company name, 
 the api will return an output with type of error: 
 "Warning" It's not production code, to use it, please contact with developer: Oleh Mykhailovskyi. 
+
+################################################################################################
+deployed api version is https://peaceful-garden-62162.herokuapp.com/
+################################################################################################
+the source of code with the fixed bags and api is https://github.com/Oleh8978/restapitestapi2
+
 All the best regards and happy coding!
